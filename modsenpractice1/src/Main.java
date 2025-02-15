@@ -15,7 +15,7 @@ public class Main {
         int target;
 
         while (a) {
-            System.out.println("Выберите задание (1-10), 0 чтобы выйти.");
+            System.out.println("Выберите задание (1-9), 0 чтобы выйти.");
             int choice = scanner.nextInt();
 
             switch (choice) {
