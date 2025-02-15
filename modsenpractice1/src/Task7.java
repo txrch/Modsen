@@ -12,7 +12,7 @@ public class Task7 {
         result.add(new ArrayList<>(tempList));
 
         for (int i = start; i < nums.length; i++) {
-            tempList.add(nums[i]); // Добавляем элемент
+            tempList.add(nums[i]);
             backtrack(result, tempList, nums, i + 1);
             tempList.remove(tempList.size() - 1);
         }
