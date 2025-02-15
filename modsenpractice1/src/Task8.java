@@ -1,26 +1,26 @@
 public class Task8 {
     public static boolean isValid(String s) {
-        if (s.length() % 2 != 0) return false; // Быстрая проверка на нечетную длину
+        if (s.length() % 2 != 0) return false;
 
-        char[] stack = new char[s.length()]; // Массив для эмуляции стека
-        int top = -1; // Указатель на верхний элемент в "стеке"
+        char[] stack = new char[s.length()];
+        int top = -1;
 
         for (char c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
-                stack[++top] = c; // Добавляем элемент в "стек"
+                stack[++top] = c;
             } else {
-                if (top == -1) return false; // Ошибка: нет открывающей скобки
+                if (top == -1) return false;
 
-                char open = stack[top--]; // Извлекаем верхний элемент
+                char open = stack[top--];
 
                 if ((c == ')' && open != '(') ||
                         (c == '}' && open != '{') ||
                         (c == ']' && open != '[')) {
-                    return false; // Ошибка: несоответствие скобок
+                    return false;
                 }
             }
         }
 
-        return top == -1; // Если стек пуст — строка валидна
+        return top == -1;
     }
 }
