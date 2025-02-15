@@ -3,8 +3,8 @@ public class Task3 {
     public static int singleNumber(int[] nums) {
         int result = 0;
         for (int num : nums) {
-            result ^= num; // XOR всех чисел
+            result ^= num;
         }
-        return result; // Останется единственное число без пары
+        return result;
     }
 }
